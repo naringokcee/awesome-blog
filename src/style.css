@@ -518,3 +518,79 @@ html, body {
     letter-spacing: 0.05em;
     color: #666;
 }
+
+/* ==========================================================================
+   KARANLIK MOD (DARK THEME) KESİN ÇÖZÜMÜ
+   ========================================================================== */
+
+/* 1. Tüm ana arka planı karanlık yapalım */
+body.dark-theme,
+body.dark-theme main,
+body.dark-theme #content {
+    background-color: #121212 !important;
+    color: #f8f9fa !important;
+}
+
+/* 2. SİHİRLİ DOKUNUŞ: HTML içindeki tüm inline (satır içi) arka plan renklerini eziyoruz! */
+body.dark-theme [style*="background-color"],
+body.dark-theme [style*="background"] {
+    background-color: #121212 !important;
+    background: #121212 !important;
+}
+
+/* 3. Beyaz kalan tüm bölümleri ve section alanlarını karanlık yapalım */
+body.dark-theme section,
+body.dark-theme .container-fluid,
+body.dark-theme .container {
+    background-color: #121212 !important;
+}
+
+/* 4. Kaybolan tüm başlıkları ve yazıları zorla beyaz/açık gri yapalım */
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3, 
+body.dark-theme h4, 
+body.dark-theme h5, 
+body.dark-theme h6,
+body.dark-theme p,
+body.dark-theme span,
+body.dark-theme li,
+body.dark-theme div:not(.icon-box) {
+    color: #f8f9fa !important;
+}
+
+/* 5. Linklerin ve Blog kartlarındaki başlıkların karanlıkta okunabilir olması */
+body.dark-theme a {
+    color: #f8f9fa !important;
+}
+body.dark-theme .card-main-title a,
+body.dark-theme .post-title a,
+body.dark-theme .about-story p {
+    color: #f8f9fa !important;
+}
+
+/* 6. Kartların, Yan Panelin, Sağ Profil Görsel Kutusunun ve Girdilerin Renkleri */
+body.dark-theme .bg-light-card,
+body.dark-theme .sticky-sidebar,
+body.dark-theme .custom-input,
+body.dark-theme .profile-image-wrapper {
+    background-color: #1e1e1e !important;
+    color: #f8f9fa !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 7. Butonlar ve Etiketler (Badge) */
+body.dark-theme .badge-tag {
+    background-color: #2a2a2a !important;
+    color: #f8f9fa !important;
+}
+
+body.dark-theme .blog-right-column {
+    border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 8. Alt Bilgi (Footer) */
+body.dark-theme footer {
+    background-color: #121212 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}

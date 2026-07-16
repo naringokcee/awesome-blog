@@ -2,6 +2,7 @@ module.exports = function(eleventyConfig) {
     // CSS ve Görselleri doğrudan çıktı klasörüne kopyala
     eleventyConfig.addPassthroughCopy("src/style.css");
     eleventyConfig.addPassthroughCopy("src/img");
+    eleventyConfig.addPassthroughCopy("src/app.js"); // veya klasörünün adı neyse (assets/js vb.)
 
     return {
         dir: {
