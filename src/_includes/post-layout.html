@@ -1,0 +1,71 @@
+---
+layout: base.html
+---
+
+<article class="py-5" style="background-color: #ffffff;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                
+                <!-- Üst Bilgiler (Kategori & Tarih) -->
+                <div class="text-muted small mb-3" style="text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">
+                    <span style="color: #555;">{{ category | default: "Geliştirme" }}</span>
+                    <span class="mx-2">•</span>
+                    <span>{{ date | date: "%d.%m.%Y" }}</span>
+                </div>
+
+                <!-- Büyük Yazı Başlığı -->
+                <h1 class="fw-bold mb-4" style="font-size: 2.6rem; line-height: 1.2; letter-spacing: -0.02em; color: #111;">
+                    {{ title }}
+                </h1>
+
+                <!-- Yazar & Okuma Süresi -->
+                <div class="d-flex align-items-center gap-3 text-muted small mb-5 pb-4 border-bottom" style="font-size: 0.85rem;">
+                    <span><i class="fa-regular fa-user me-1"></i> {{ author | default: "Narin Gökçe" }}</span>
+                    <span><i class="fa-regular fa-clock me-1"></i> {{ readingTime | default: "6 dk okuma" }}</span>
+                </div>
+
+                <!-- Öne Çıkarılan Görsel (Eğer varsa gösterilir) -->
+                {% if image %}
+                <div class="mb-5" style="border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+                    <img src="{{ image }}" class="img-fluid w-100" alt="{{ title }}" style="object-fit: cover; max-height: 450px;">
+                </div>
+                {% endif %}
+
+                <!-- Markdown İçeriği (Yazının Kendisi) -->
+                <div class="post-content" style="font-size: 1.05rem; line-height: 1.8; color: #2c3e50;">
+                    {{ content }}
+                </div>
+
+                <!-- Geri Dönüş Linki -->
+                <div class="mt-5 pt-4 border-top">
+                    <a href="/blog/" class="btn btn-outline-secondary btn-sm" style="border-radius: 20px; padding: 6px 16px;">
+                        <i class="fa-solid fa-arrow-left me-2"></i> Blog Yazılarına Dön
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- Markdown yazılarının içindeki başlık ve paragrafları daha estetik göstermek için küçük CSS eklemesi -->
+<style>
+    .post-content p {
+        margin-bottom: 1.5rem;
+    }
+    .post-content h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: #111;
+    }
+    .post-content ul {
+        margin-bottom: 1.5rem;
+        padding-left: 1.2rem;
+    }
+    .post-content li {
+        margin-bottom: 0.5rem;
+    }
+</style>

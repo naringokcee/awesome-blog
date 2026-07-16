@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Yazılarım | Narin Gökçe</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome İkonları -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Senin CSS Dosyan -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <!-- Navigasyon Menüsü (Ortak Siyah Navbar) -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a href="/index.html" class="navbar-brand d-flex align-items-center">
+                <img src="/img/logo8.png" class="wid me-2" alt="Logo" style="width: 30px; height: auto;">
+                <span class="fw-semibold">Narin Gökçe</span>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mobile">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div id="mobile" class="collapse navbar-collapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0 gap-1 align-items-center">
+    <li class="nav-item">
+        <!-- Ana sayfa için sadece slash (/) yeterli -->
+        <a href="/" class="nav-link ">Ana Sayfa</a>
+    </li>
+    <li class="nav-item">
+        <a href="/blog/" class="nav-link active">Blog Yazılarım</a>
+    </li>
+    <li class="nav-item">
+        <a href="/hakkimda/" class="nav-link ">Hakkımda</a>
+    </li>
+    <li class="nav-item">
+        <a href="/iletisim/" class="nav-link ">İletişim</a>
+    </li>
+</ul>
+                <!-- Arama Çubuğu & Tema Butonu -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="search-box-wrapper">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Ara...">
+                    </div>
+                    <button id="dark-mode-toggle" type="button" class="btn p-2 text-white" title="Temayı Değiştir">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dinamik İçerik Buraya Gelecek -->
+    
+<!-- Sayfa Başlığı -->
+<header class="py-5 border-bottom" style="background-color: #fafafa;">
+    <div class="container">
+        <div class="col-lg-8 ps-0">
+            <h1 class="fw-bold tracking-tight mb-2" style="font-size: 2.4rem; color: #111;">Blog Yazılarım</h1>
+            <p class="text-muted mb-0" style="font-size: 0.9rem; line-height: 1.5;">
+                Yazılım serüvenimden notlar, okuduğum kitapların analizleri ve hayatımdan küçük denemeler. Merak ettiklerinizi kategorilere göre filtreleyerek okuyabilirsiniz.
+            </p>
+        </div>
+    </div>
+</header>
+
+<!-- Ana Gövde: Yazılar & Sidebar -->
+<main class="py-5" style="background-color: #ffffff;">
+    <div class="container">
+        <div class="row g-lg-5">
+
+            <!-- Sol Taraf: Dinamik Blog Yazıları Listesi -->
+            <div class="col-lg-8 blog-left-column">
+                <div class="d-flex flex-column gap-5"><article class="custom-blog-card pb-5 border-bottom">
+                        <div class="card-left-content">
+                            <div class="card-top-meta mb-2">
+                                <span class="meta-category text-uppercase">Bahçecilik</span>
+                                <span class="meta-divider">•</span>
+                                <span class="meta-date">28 Haziran 2026</span>
+                            </div>
+
+                            <h2 class="card-main-title mb-2">
+                                <a href="/posts/balkon-domates/">Balkonda Cherry Domates Yetiştirme Serüvenim</a>
+                            </h2>
+
+                            <p class="card-excerpt text-muted mb-3">
+                                Bu yazı için henüz bir açıklama girilmedi.
+                            </p>
+
+                            <div class="card-bottom-meta d-flex align-items-center justify-content-between pt-2">
+                                <div class="d-flex align-items-center gap-3 text-muted">
+                                    <span><i class="fa-regular fa-user me-1"></i> Narin Gökçe</span>
+                                    <span><i class="fa-regular fa-clock me-1"></i> 4 dk okuma</span>
+                                </div>
+                                <button class="like-btn" onclick="this.classList.toggle('liked')" title="Beğen">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-right-image">
+                            <img src="/img/balkon-bahcecilik.png" alt="Balkonda Cherry Domates Yetiştirme Serüvenim">
+                        </div>
+                        
+                    </article><article class="custom-blog-card pb-5 border-bottom">
+                        <div class="card-left-content">
+                            <div class="card-top-meta mb-2">
+                                <span class="meta-category text-uppercase">Geliştirme</span>
+                                <span class="meta-divider">•</span>
+                                <span class="meta-date">15 Temmuz 2026</span>
+                            </div>
+
+                            <h2 class="card-main-title mb-2">
+                                <a href="/posts/ilk-yazim/">Unity'de Sınır Çizme Mekaniği ve Çözümler</a>
+                            </h2>
+
+                            <p class="card-excerpt text-muted mb-3">
+                                Bu yazı için henüz bir açıklama girilmedi.
+                            </p>
+
+                            <div class="card-bottom-meta d-flex align-items-center justify-content-between pt-2">
+                                <div class="d-flex align-items-center gap-3 text-muted">
+                                    <span><i class="fa-regular fa-user me-1"></i> Narin Gökçe</span>
+                                    <span><i class="fa-regular fa-clock me-1"></i> 6 dk okuma</span>
+                                </div>
+                                <button class="like-btn" onclick="this.classList.toggle('liked')" title="Beğen">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-right-image">
+                            <img src="/img/unity-project.png" alt="Unity'de Sınır Çizme Mekaniği ve Çözümler">
+                        </div>
+                        
+                    </article></div>
+            </div>
+
+            <!-- Sağ Taraf: Sidebar (Görseldeki Gibi Sabit ve Zengin) -->
+            <div class="col-lg-4 blog-right-column">
+                <div class="sticky-sidebar d-flex flex-column gap-5">
+                    
+                    <!-- KATEGORİLER -->
+                    <div>
+                        <h6 class="fw-bold text-uppercase text-secondary mb-3" style="font-size: 0.75rem; letter-spacing: 0.05em;">KATEGORİLER</h6>
+                        <div class="list-group list-group-flush" style="font-size: 0.85rem;">
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center bg-transparent ps-0 border-bottom py-2">
+                                <span style="color: #444;">Geliştirme & Projeler</span>
+                                <span class="text-muted small">(1)</span>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center bg-transparent ps-0 border-bottom py-2">
+                                <span style="color: #444;">Balkon Bahçeciliği</span>
+                                <span class="text-muted small">(1)</span>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center bg-transparent ps-0 border-bottom py-2">
+                                <span style="color: #444;">Kitap Analizleri</span>
+                                <span class="text-muted small">(1)</span>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center bg-transparent ps-0 border-bottom py-2">
+                                <span style="color: #444;">Müzik & Ukulele</span>
+                                <span class="text-muted small">(1)</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- POPÜLER ETİKETLER -->
+                    <div>
+                        <h6 class="fw-bold text-uppercase text-secondary mb-3" style="font-size: 0.75rem; letter-spacing: 0.05em;">POPÜLER ETİKETLER</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="#" class="badge-tag">#unity</a>
+                            <a href="#" class="badge-tag">#bahçe</a>
+                            <a href="#" class="badge-tag">#iletişim</a>
+                            <a href="#" class="badge-tag">#gelişim</a>
+                            <a href="#" class="badge-tag">#akustik</a>
+                            <a href="#" class="badge-tag">#monstera</a>
+                        </div>
+                    </div>
+
+                    <!-- EN ÇOK OKUNANLAR -->
+                    <div>
+                        <h6 class="fw-bold text-uppercase text-secondary mb-3" style="font-size: 0.75rem; letter-spacing: 0.05em;">EN ÇOK OKUNANLAR</h6>
+                        <div class="d-flex flex-column gap-3">
+                            <div>
+                                <h6 class="mb-1" style="font-size: 0.9rem; font-weight: 600;">
+                                    <a href="#" class="text-dark text-decoration-none hover-link">Tongue Fu: Sözlü Dövüş Sanatı İncelemesi</a>
+                                </h6>
+                                <small class="text-muted"><i class="fa-regular fa-clock me-1"></i> 4 dk okuma</small>
+                            </div>
+                            <div class="pt-2 border-top">
+                                <h6 class="mb-1" style="font-size: 0.9rem; font-weight: 600;">
+                                    <a href="#" class="text-dark text-decoration-none hover-link">Unity Harita Sınırı Çizme Teknikleri</a>
+                                </h6>
+                                <small class="text-muted"><i class="fa-regular fa-clock me-1"></i> 6 dk okuma</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+    <!-- Footer (Ortak) -->
+    <footer class="py-4 border-top text-center text-muted" style="font-size: 0.8rem; background-color: #fafafa;">
+        <div class="container">
+            <p class="mb-0">© 2026 Narin Gökçe. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
