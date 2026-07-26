@@ -75,6 +75,7 @@ html, body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+
 /* Profil Alanı (Görsel Küçültüldü) *******************/ 
 .profile-image-wrapper {
     position: relative;
@@ -292,10 +293,6 @@ html, body {
         order: -1; /* Mobilde görsel en üste gelsin */
     }
 }
-
-
-
-
 
 .search-box-wrapper {
     position: relative;
@@ -593,4 +590,1533 @@ body.dark-theme .blog-right-column {
 body.dark-theme footer {
     background-color: #121212 !important;
     border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* --- Hero (Giriş) Bölümü Özelleştirmeleri --- */
+
+.hero-section {
+    background-color: #fafafa;
+    /* Alttan ve üstten genişliği (padding) buradan dilediğin gibi artırabilirsin */
+    padding-top: 5.5rem !important;
+    padding-bottom: 5.5rem !important;
+}
+
+/* Ana Başlık (Satır Aralığı ve Boyut) */
+.hero-title {
+    font-size: 2.4rem !important;
+    line-height: 1.55 !important; /* Satır aralarını ferahlatan kritik nokta */
+    color: #111111;
+}
+
+/* Alt Etiketler */
+.hero-tags {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.8 !important;
+    color: #666666;
+    letter-spacing: 0.03em;
+}
+
+/* --- Karanlık Mod Uyum Kuralları --- */
+body.dark-theme .hero-section {
+    background-color: transparent !important;
+}
+
+body.dark-theme .hero-title {
+    color: #f8f9fa !important;
+}
+
+body.dark-theme .hero-tags {
+    color: #aaa !important;
+}
+
+/* --- Kaydırmalı Kategori Şeridi (Maksimum 5 Tane Yan Yana) --- */
+
+.category-scroll-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;                      /* Kategoriler arası ideal ferahlık */
+    overflow-x: auto;                 /* 5 taneyi geçince sağa kaydırma aktifleşir */
+    padding-bottom: 0.6rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex-shrink: 0;                   /* Kartların daralıp ezilmesini önler */
+    /* Ekranı tam 5 eşit parçaya bölüp aradaki boşlukları düşüyoruz */
+    width: calc((100% - (4 * 2rem)) / 5); 
+    min-width: 180px;                 /* Çok küçük ekranlarda veya daralmalarda yazılar tek satırda rahat kalsın */
+}
+
+.category-item h6 {
+    font-size: 0.9rem;
+}
+
+.category-item span {
+    font-size: 0.75rem;
+}
+
+/* Şık ve İnce Kaydırma Çubuğu (Scrollbar) Tasarımı */
+.category-scroll-wrapper::-webkit-scrollbar {
+    height: 4px;
+}
+
+.category-scroll-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.category-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+body.dark-theme .category-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hakkımda Sayfası ***************************************** */
+ .about-page {
+        --about-bg: #fafafa;
+        --about-card-bg: #ffffff;
+        --about-text: #171717;
+        --about-muted: #686868;
+        --about-border: #e8e8e8;
+        --about-soft-bg: #f5f5f5;
+    }
+
+    .about-hero {
+        padding: 5rem 0 4rem;
+        background-color: var(--about-bg);
+        border-bottom: 1px solid var(--about-border);
+    }
+
+    .about-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1.25rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--about-muted);
+    }
+
+    .about-eyebrow::before {
+        content: "";
+        width: 2rem;
+        height: 1px;
+        background-color: currentColor;
+    }
+
+    .about-title {
+        max-width: 850px;
+        margin-bottom: 1.25rem;
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-weight: 750;
+        line-height: 1.05;
+        letter-spacing: -0.055em;
+        color: var(--about-text);
+        
+    }
+
+    .about-introduction {
+        max-width: 760px;
+        margin-bottom: 0;
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        line-height: 1.8;
+        color: var(--about-muted);
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .about-quote {
+        position: relative;
+        margin-top: 2.25rem;
+        padding-left: 1.25rem;
+        border-left: 3px solid var(--about-text);
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.7;
+        color: var(--about-text);
+    }
+
+    .about-content {
+        padding: 5rem 0;
+    }
+
+    .about-article {
+        max-width: 760px;
+    }
+
+    .about-section {
+        scroll-margin-top: 6rem;
+    }
+
+    .about-section + .about-section {
+        margin-top: 4rem;
+        padding-top: 4rem;
+        border-top: 1px solid var(--about-border);
+    }
+
+    .about-section-label {
+        display: block;
+        margin-bottom: 0.75rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: var(--about-muted);
+    }
+
+    .about-section-title {
+        margin-bottom: 1.5rem;
+        font-size: clamp(1.65rem, 3vw, 2.15rem);
+        font-weight: 750;
+        line-height: 1.2;
+        letter-spacing: -0.035em;
+        color: var(--about-text);
+    }
+
+    .about-section p {
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+        line-height: 1.9;
+        color: var(--about-muted);
+    }
+
+    .about-section p:last-child {
+        margin-bottom: 0;
+    }
+
+    .about-section strong {
+        font-weight: 650;
+        color: var(--about-text);
+    }
+
+    .about-highlight {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background-color: var(--about-soft-bg);
+        border: 1px solid var(--about-border);
+        border-radius: 1rem;
+    }
+
+    .about-highlight p {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 600;
+        line-height: 1.75;
+        color: var(--about-text);
+    }
+
+    .about-interests {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.85rem;
+        margin-top: 2rem;
+    }
+
+    .about-interest {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.85rem;
+        padding: 1rem;
+        background-color: var(--about-card-bg);
+        border: 1px solid var(--about-border);
+        border-radius: 0.85rem;
+    }
+
+    .about-interest-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 2rem;
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--about-soft-bg);
+        border-radius: 0.55rem;
+        color: var(--about-text);
+    }
+
+    .about-interest h3 {
+        margin: 0 0 0.25rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--about-text);
+    }
+
+    .about-interest p {
+        margin: 0;
+        font-size: 0.8rem;
+        line-height: 1.55;
+        color: var(--about-muted);
+    }
+
+    .about-closing {
+        padding: 2rem;
+        background-color: #111111;
+        border-radius: 1.25rem;
+        color: #ffffff;
+    }
+
+    .about-closing h2 {
+        margin-bottom: 1rem;
+        font-size: clamp(1.6rem, 3vw, 2.1rem);
+        font-weight: 750;
+        letter-spacing: -0.035em;
+    }
+
+    .about-closing p {
+        color: rgba(255, 255, 255, 0.72);
+    }
+
+    .about-closing p:last-child {
+        margin-bottom: 0;
+    }
+
+    .about-sidebar {
+        position: sticky;
+        top: 6rem;
+    }
+
+    .about-profile-card {
+        overflow: hidden;
+        background-color: var(--about-card-bg);
+        border: 1px solid var(--about-border);
+        border-radius: 1.25rem;
+    }
+
+    .about-profile-top {
+        padding: 2rem;
+        text-align: center;
+        background-color: var(--about-soft-bg);
+        border-bottom: 1px solid var(--about-border);
+    }
+
+    .about-avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 6rem;
+        height: 6rem;
+        margin: 0 auto 1.25rem;
+        background-color: #111111;
+        border: 5px solid #ffffff;
+        border-radius: 50%;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        color: #ffffff;
+        font-size: 1.35rem;
+        font-weight: 750;
+        letter-spacing: 0.04em;
+    }
+
+    .about-profile-name {
+        margin-bottom: 0.35rem;
+        font-size: 1.2rem;
+        font-weight: 750;
+        color: var(--about-text);
+    }
+
+    .about-profile-role {
+        margin-bottom: 0;
+        font-size: 0.75rem;
+        font-weight: 650;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--about-muted);
+    }
+
+    .about-profile-body {
+        padding: 1.5rem;
+    }
+
+    .about-info-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .about-info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .about-info-item i {
+        width: 1rem;
+        margin-top: 0.2rem;
+        color: var(--about-text);
+        text-align: center;
+    }
+
+    .about-info-label {
+        display: block;
+        margin-bottom: 0.15rem;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--about-muted);
+    }
+
+    .about-info-value {
+        display: block;
+        font-size: 0.84rem;
+        font-weight: 600;
+        line-height: 1.45;
+        color: var(--about-text);
+    }
+
+    .about-skills {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--about-border);
+    }
+
+    .about-skills-title {
+        margin-bottom: 0.75rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--about-muted);
+    }
+
+    .about-tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+    }
+
+    .about-tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.4rem 0.65rem;
+        background-color: var(--about-soft-bg);
+        border: 1px solid var(--about-border);
+        border-radius: 999px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--about-text);
+    }
+
+    .about-profile-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--about-border);
+    }
+
+    .about-profile-actions .btn {
+        padding: 0.65rem 0.75rem;
+        font-size: 0.76rem;
+        font-weight: 650;
+        border-radius: 0.65rem;
+    }
+
+    .about-note-card {
+        margin-top: 1rem;
+        padding: 1.25rem;
+        background-color: var(--about-soft-bg);
+        border: 1px solid var(--about-border);
+        border-radius: 1rem;
+    }
+
+    .about-note-card i {
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
+        color: var(--about-text);
+    }
+
+    .about-note-card p {
+        margin: 0;
+        font-size: 0.78rem;
+        line-height: 1.65;
+        color: var(--about-muted);
+    }
+
+    @media (max-width: 991.98px) {
+        .about-hero {
+            padding: 4rem 0 3.5rem;
+        }
+
+        .about-content {
+            padding: 4rem 0;
+        }
+
+        .about-sidebar {
+            position: static;
+            margin-top: 1rem;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .about-hero {
+            padding: 3.5rem 0 3rem;
+        }
+
+        .about-content {
+            padding: 3rem 0;
+        }
+
+        .about-interests {
+            grid-template-columns: 1fr;
+        }
+
+        .about-section + .about-section {
+            margin-top: 3rem;
+            padding-top: 3rem;
+        }
+
+        .about-closing {
+            padding: 1.5rem;
+        }
+    }
+
+    .about-name{
+    position: relative;
+    display: inline-block;
+}
+
+.about-name::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: #111;
+    border-radius: 999px;
+}
+
+/* ==========================================================================
+   HAKKIMDA SAYFASI - GECE MODU KESİN VE TAM UYUM DÜZELTMESİ
+   ========================================================================== */
+
+/* 1. Sayfa, Hero ve Tüm Container Arka Planlarını Eşitle */
+body.dark-theme .about-page,
+body.dark-theme .about-hero,
+body.dark-theme .about-content,
+body.dark-theme .about-section,
+body.dark-theme .about-page .container {
+    background-color: #121212 !important;
+    background: #121212 !important;
+    color: #e4e4e7 !important;
+}
+
+/* 2. Başlıklar ve Genel Yazılar */
+body.dark-theme .about-title,
+body.dark-theme .about-section-title,
+body.dark-theme .about-profile-name,
+body.dark-theme .about-skills-title,
+body.dark-theme .about-interest h3,
+body.dark-theme .about-closing h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .about-introduction,
+body.dark-theme .about-section p,
+body.dark-theme .about-interest p,
+body.dark-theme .about-closing p,
+body.dark-theme .about-eyebrow,
+body.dark-theme .about-section-label {
+    color: #a1a1aa !important;
+}
+
+/* 3. Paragraf İçindeki <strong> Metinlerin (Örn: Mersin'de, Java) Görünürlüğü */
+body.dark-theme .about-section p strong,
+body.dark-theme .about-page strong {
+    color: #ffffff !important;
+}
+
+/* 4. Öne Çıkan Kutular (Highlight & Quote) */
+body.dark-theme .about-highlight,
+body.dark-theme .about-quote {
+    background-color: #1e1e24 !important;
+    background: #1e1e24 !important;
+    border-left: 4px solid #a78bfa !important;
+    color: #f4f4f5 !important;
+}
+
+body.dark-theme .about-highlight p,
+body.dark-theme .about-quote p {
+    color: #f4f4f5 !important;
+}
+
+/* 5. Sağ Taraf Profil Kartı & İlgi Alanı Kutuları */
+body.dark-theme .about-profile-card,
+body.dark-theme .about-note-card,
+body.dark-theme .about-interest {
+    background-color: #1e1e24 !important;
+    background: #1e1e24 !important;
+    border: 1px solid #27272a !important;
+    color: #e4e4e7 !important;
+}
+
+/* Profil Kartı İç Metinler */
+body.dark-theme .about-profile-role,
+body.dark-theme .about-info-label {
+    color: #a1a1aa !important;
+}
+
+body.dark-theme .about-info-value {
+    color: #ffffff !important;
+}
+
+/* İkon Kutucukları */
+body.dark-theme .about-info-item i,
+body.dark-theme .about-interest-icon {
+    color: #a78bfa !important;
+    background-color: rgba(167, 139, 250, 0.15) !important;
+}
+
+/* Profil Kartı Dairesi (NG Avatarı) */
+body.dark-theme .about-avatar {
+    background-color: #27272a !important;
+    color: #ffffff !important;
+    border: 2px solid #3f3f46 !important;
+}
+
+/* Etiketler (Tags) */
+body.dark-theme .about-tag {
+    background-color: #27272a !important;
+    color: #d4d4d8 !important;
+    border: 1px solid #3f3f46 !important;
+}
+
+/* Butonlar */
+body.dark-theme .about-profile-actions .btn-outline-dark {
+    color: #e4e4e7 !important;
+    border-color: #3f3f46 !important;
+    background-color: transparent !important;
+}
+
+body.dark-theme .about-profile-actions .btn-outline-dark:hover {
+    background-color: #27272a !important;
+    color: #ffffff !important;
+}
+
+body.dark-theme .about-profile-actions .btn-dark {
+    background-color: #a78bfa !important;
+    border-color: #a78bfa !important;
+    color: #09090b !important;
+}
+
+/* ==========================================================================
+   PROFİL KARTI ÜST KISIM VE İSİM SOYİSİM KESİN DÜZELTMESİ
+   ========================================================================== */
+
+/* Profil Kartının Üst Başlık Alanı (Avatar & İsim Alanı Arka Planı) */
+body.dark-theme .about-profile-header,
+body.dark-theme .about-profile-card-header,
+body.dark-theme .about-profile-top {
+    background-color: #1e1e24 !important;
+    background: #1e1e24 !important;
+    border-bottom: 1px solid #27272a !important;
+}
+
+/* Kart İçindeki Narin Gökçe Yazısı */
+body.dark-theme .about-profile-name,
+body.dark-theme .about-profile-card h3,
+body.dark-theme .about-profile-card h4,
+body.dark-theme .about-profile-title {
+    color: #ffffff !important;
+}
+
+/* Altındaki Unvan (Informatik Öğrencisi & Geliştirici) Yazısı */
+body.dark-theme .about-profile-role,
+body.dark-theme .about-profile-subtitle,
+body.dark-theme .about-profile-card p {
+    color: #a1a1aa !important;
+}
+
+/* NG Dairesi Arka Planı ve Kenarlığı */
+body.dark-theme .about-avatar,
+body.dark-theme .profile-avatar {
+    background-color: #27272a !important;
+    color: #ffffff !important;
+    border: 2px solid #3f3f46 !important;
+}
+
+/* ========================================
+   İLETİŞİM SAYFASI
+======================================== */
+
+:root {
+    --contact-page-bg: #ffffff;
+    --contact-hero-bg: #fafafa;
+    --contact-card-bg: #f7f8f9;
+    --contact-input-bg: #fafafa;
+
+    --contact-text: #111111;
+    --contact-muted: #606060;
+    --contact-placeholder: #737373;
+
+    --contact-border: #dedede;
+    --contact-focus-border: #777777;
+
+    --contact-button-bg: #111111;
+    --contact-button-text: #ffffff;
+    --contact-button-hover: #292929;
+}
+
+
+/* Aşağıdaki seçiciler farklı gece modu sistemlerini destekler */
+[data-theme="dark"],
+html.dark,
+body.dark,
+body.dark-mode {
+    --contact-page-bg: #121212;
+    --contact-hero-bg: #171717;
+    --contact-card-bg: #1b1b1b;
+    --contact-input-bg: #191919;
+
+    --contact-text: #f1f1f1;
+    --contact-muted: #b7b7b7;
+    --contact-placeholder: #8f8f8f;
+
+    --contact-border: #363636;
+    --contact-focus-border: #c5c5c5;
+
+    --contact-button-bg: #f1f1f1;
+    --contact-button-text: #111111;
+    --contact-button-hover: #d8d8d8;
+}
+
+
+/* Sayfanın genel arka planı */
+.contact-page {
+    color: var(--contact-text);
+}
+
+
+/* Üst başlık alanı */
+.contact-hero {
+    background-color: var(--contact-hero-bg);
+    border-color: var(--contact-border) !important;
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.contact-title {
+    margin: 0;
+    color: var(--contact-text);
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    letter-spacing: -0.035em;
+}
+
+.contact-description {
+    max-width: 780px;
+    color: var(--contact-muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+
+/* Form başlığı */
+.contact-section-title {
+    color: var(--contact-text);
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+}
+
+
+/* Form etiketleri */
+.custom-label {
+    margin-bottom: 0.55rem;
+    color: var(--contact-muted);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+}
+
+
+/* Input ve textarea */
+.custom-input {
+    min-height: 50px;
+    padding: 0.8rem 1rem;
+    background-color: var(--contact-input-bg);
+    color: var(--contact-text);
+    border: 1px solid var(--contact-border);
+    border-radius: 0.65rem;
+    box-shadow: none;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.2s ease;
+}
+
+textarea.custom-input {
+    min-height: 145px;
+    resize: vertical;
+}
+
+.custom-input::placeholder {
+    color: var(--contact-placeholder);
+    opacity: 1;
+}
+
+.custom-input:hover {
+    border-color: var(--contact-focus-border);
+}
+
+.custom-input:focus {
+    background-color: var(--contact-input-bg);
+    color: var(--contact-text);
+    border-color: var(--contact-focus-border);
+    box-shadow: 0 0 0 3px rgb(127 127 127 / 12%);
+}
+
+
+/* Tarayıcının otomatik doldurma rengi */
+.custom-input:-webkit-autofill,
+.custom-input:-webkit-autofill:hover,
+.custom-input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--contact-text);
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+
+/* Gönder butonu */
+.custom-submit-btn {
+    padding: 0.78rem 1.4rem;
+    background-color: var(--contact-button-bg);
+    color: var(--contact-button-text);
+    border: 1px solid var(--contact-button-bg);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.custom-submit-btn:hover,
+.custom-submit-btn:focus {
+    background-color: var(--contact-button-hover);
+    color: var(--contact-button-text);
+    border-color: var(--contact-button-hover);
+    transform: translateY(-1px);
+}
+
+
+/* Sağdaki iletişim kartı */
+.contact-info-card {
+    background-color: var(--contact-card-bg);
+    color: var(--contact-text);
+    border: 1px solid var(--contact-border);
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.contact-card-title {
+    color: var(--contact-text);
+    font-size: 1.1rem;
+}
+
+.contact-info-list {
+    font-size: 0.88rem;
+}
+
+.contact-icon {
+    width: 18px;
+    color: var(--contact-muted);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.contact-info-label {
+    margin-bottom: 0.15rem;
+    color: var(--contact-muted);
+}
+
+.contact-info-value {
+    color: var(--contact-text);
+}
+
+a.contact-info-value:hover {
+    color: var(--contact-muted);
+}
+
+
+/* Kart ayırıcı çizgisi */
+.contact-divider {
+    border-color: var(--contact-border);
+    opacity: 1;
+}
+
+
+/* Sosyal medya bölümü */
+.contact-social-title {
+    color: var(--contact-text);
+    font-size: 0.95rem;
+}
+
+.contact-social-link {
+    background-color: transparent;
+    color: var(--contact-text);
+    border: 1px solid var(--contact-border);
+    font-size: 0.75rem;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.contact-social-link:hover,
+.contact-social-link:focus {
+    background-color: var(--contact-text);
+    color: var(--contact-page-bg);
+    border-color: var(--contact-text);
+}
+
+
+/* Mobil görünüm */
+@media (max-width: 991.98px) {
+    .contact-form-wrapper {
+        padding-right: 0 !important;
+    }
+
+    .contact-info-card {
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .contact-hero {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    .contact-page {
+        margin-top: 2.5rem !important;
+        margin-bottom: 2.5rem !important;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-info-card {
+        padding: 1.25rem !important;
+    }
+}
+
+/* ========================================
+   İLETİŞİM SAYFASI – TEMA DÜZELTMELERİ
+======================================== */
+
+.contact-hero {
+    background-color: var(--contact-hero-bg) !important;
+    color: var(--contact-text) !important;
+    border-color: var(--contact-border) !important;
+}
+
+.contact-hero .container,
+.contact-hero .row,
+.contact-hero div {
+    background-color: transparent !important;
+}
+
+.contact-title {
+    color: var(--contact-text) !important;
+}
+
+.contact-description {
+    color: var(--contact-muted) !important;
+}
+
+.contact-page,
+.contact-page main,
+main.contact-page {
+    background-color: var(--contact-page-bg) !important;
+    color: var(--contact-text) !important;
+}
+
+.contact-section-title,
+.contact-card-title,
+.contact-social-title {
+    color: var(--contact-text) !important;
+}
+
+.contact-info-card {
+    background-color: var(--contact-card-bg) !important;
+    color: var(--contact-text) !important;
+    border: 1px solid var(--contact-border) !important;
+}
+
+.contact-info-card *,
+.contact-info-card h2,
+.contact-info-card h3,
+.contact-info-card h5 {
+    border-color: var(--contact-border);
+}
+
+.contact-info-label,
+.contact-icon {
+    color: var(--contact-muted) !important;
+}
+
+.contact-info-value,
+.contact-info-card a,
+.contact-info-card span {
+    color: var(--contact-text) !important;
+}
+
+.contact-divider {
+    border-color: var(--contact-border) !important;
+    opacity: 1;
+}
+
+.contact-social-link {
+    background-color: transparent !important;
+    color: var(--contact-text) !important;
+    border: 1px solid var(--contact-border) !important;
+}
+
+.contact-social-link:hover {
+    background-color: var(--contact-text) !important;
+    color: var(--contact-card-bg) !important;
+    border-color: var(--contact-text) !important;
+}
+
+.custom-input {
+    background-color: var(--contact-input-bg) !important;
+    color: var(--contact-text) !important;
+    border-color: var(--contact-border) !important;
+}
+
+.custom-input:focus {
+    background-color: var(--contact-input-bg) !important;
+    color: var(--contact-text) !important;
+}
+
+.custom-input::placeholder {
+    color: var(--contact-placeholder) !important;
+}
+
+[data-theme="dark"],
+html[data-theme="dark"],
+html.dark,
+html.dark-mode,
+html.dark-theme,
+body.dark,
+body.dark-mode,
+body.dark-theme,
+body[data-theme="dark"] {
+    --contact-page-bg: #111111;
+    --contact-hero-bg: #171717;
+    --contact-card-bg: #1b1b1b;
+    --contact-input-bg: #1d1d1d;
+
+    --contact-text: #f4f4f4;
+    --contact-muted: #aaaaaa;
+    --contact-placeholder: #888888;
+
+    --contact-border: #353535;
+    --contact-focus-border: #777777;
+
+    --contact-button-bg: #f4f4f4;
+    --contact-button-text: #111111;
+    --contact-button-hover: #d8d8d8;
+}
+
+/* ==================================================
+   BLOG LİSTE SAYFASI
+================================================== */
+
+:root {
+    --blog-page-bg: #ffffff;
+    --blog-hero-bg: #fafafa;
+    --blog-text: #111111;
+    --blog-muted: #666c72;
+    --blog-soft-text: #7b8188;
+    --blog-border: #e1e4e7;
+    --blog-image-bg: #f4f4f4;
+    --blog-tag-bg: #f2f2f3;
+    --blog-tag-hover-bg: #111111;
+    --blog-tag-hover-text: #ffffff;
+}
+
+
+/* Gece modu */
+[data-theme="dark"],
+html[data-theme="dark"],
+html.dark,
+html.dark-mode,
+body.dark,
+body.dark-mode {
+    --blog-page-bg: #111111;
+    --blog-hero-bg: #171717;
+    --blog-text: #f2f2f2;
+    --blog-muted: #b3b3b3;
+    --blog-soft-text: #969696;
+    --blog-border: #303030;
+    --blog-image-bg: #1d1d1d;
+    --blog-tag-bg: #202020;
+    --blog-tag-hover-bg: #f2f2f2;
+    --blog-tag-hover-text: #111111;
+}
+
+
+/* ==================================================
+   ÜST BAŞLIK ALANI
+================================================== */
+
+.blog-hero {
+    background-color: var(--blog-hero-bg);
+    color: var(--blog-text);
+    border-color: var(--blog-border) !important;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.blog-page-title {
+    margin: 0;
+    color: var(--blog-text);
+    font-size: clamp(2rem, 4vw, 2.55rem);
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+.blog-page-description {
+    max-width: 800px;
+    color: var(--blog-muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+
+/* ==================================================
+   SAYFA GÖVDESİ
+================================================== */
+
+.blog-page {
+    min-height: 100vh;
+    background-color: var(--blog-page-bg);
+    color: var(--blog-text);
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.blog-left-column {
+    padding-right: 2rem;
+}
+
+.blog-right-column {
+    padding-left: 2rem;
+    border-left: 1px solid var(--blog-border);
+}
+
+
+/* ==================================================
+   BLOG KARTLARI
+================================================== */
+
+.custom-blog-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 175px;
+    align-items: center;
+    gap: 2.25rem;
+    width: 100%;
+    border-color: var(--blog-border) !important;
+}
+
+.card-left-content {
+    min-width: 0;
+}
+
+.card-top-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--blog-soft-text);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.055em;
+}
+
+.meta-category {
+    color: var(--blog-muted);
+}
+
+.meta-divider {
+    color: var(--blog-border);
+}
+
+.meta-date {
+    color: var(--blog-soft-text);
+}
+
+.card-main-title {
+    margin: 0;
+    max-width: 720px;
+    font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+    line-height: 1.28;
+    letter-spacing: -0.025em;
+}
+
+.card-main-title a {
+    color: var(--blog-text);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.card-main-title a:hover {
+    color: var(--blog-text);
+    opacity: 0.68;
+}
+
+.card-excerpt {
+    margin-top: 0.65rem;
+    max-width: 680px;
+    color: var(--blog-muted);
+    font-size: 0.93rem;
+    line-height: 1.65;
+}
+
+.card-bottom-meta {
+    margin-top: 1.1rem;
+    border-top: 1px solid var(--blog-border);
+}
+
+.post-meta-info {
+    color: var(--blog-muted);
+    font-size: 0.78rem;
+}
+
+.post-meta-info span {
+    white-space: nowrap;
+}
+
+.post-meta-info i {
+    color: var(--blog-soft-text);
+}
+
+
+/* ==================================================
+   BLOG GÖRSELİ
+================================================== */
+
+.card-right-image {
+    display: block;
+    width: 175px;
+    height: 140px;
+    overflow: hidden;
+    background-color: var(--blog-image-bg);
+    border: 1px solid var(--blog-border);
+    border-radius: 0.65rem;
+    text-decoration: none;
+}
+
+.card-right-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-right-image:hover img {
+    transform: scale(1.035);
+}
+
+.card-right-image.image-error {
+    position: relative;
+}
+
+.card-right-image.image-error::after {
+    content: "Görsel yakında";
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: var(--blog-soft-text);
+    font-size: 0.75rem;
+}
+
+
+/* ==================================================
+   BEĞENİ BUTONU
+================================================== */
+
+.like-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    background: transparent;
+    color: var(--blog-soft-text);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.like-btn:hover {
+    background-color: var(--blog-tag-bg);
+    color: var(--blog-text);
+    transform: translateY(-1px);
+}
+
+.like-btn.liked {
+    color: #c84b55;
+}
+
+
+/* ==================================================
+   SIDEBAR
+================================================== */
+
+.sticky-sidebar {
+    position: sticky;
+    top: 105px;
+}
+
+.sidebar-section {
+    width: 100%;
+}
+
+.sidebar-title {
+    margin: 0 0 1rem;
+    color: var(--blog-soft-text);
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sidebar-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    padding: 0.72rem 0;
+    color: var(--blog-muted);
+    font-size: 0.87rem;
+    line-height: 1.4;
+    text-decoration: none;
+    border-bottom: 1px solid var(--blog-border);
+    transition:
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.sidebar-list-item:first-child {
+    border-top: 1px solid var(--blog-border);
+}
+
+.sidebar-list-item:hover {
+    padding-left: 0.25rem;
+    color: var(--blog-text);
+}
+
+.sidebar-count {
+    flex-shrink: 0;
+    color: var(--blog-soft-text);
+    font-size: 0.78rem;
+}
+
+
+/* ==================================================
+   ETİKETLER
+================================================== */
+
+.badge-tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0.45rem 0.85rem;
+    background-color: var(--blog-tag-bg);
+    color: var(--blog-muted);
+    border-radius: 999px;
+    font-size: 0.77rem;
+    line-height: 1;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.badge-tag:hover {
+    background-color: var(--blog-tag-hover-bg);
+    color: var(--blog-tag-hover-text);
+    transform: translateY(-1px);
+}
+
+
+/* ==================================================
+   EN ÇOK OKUNANLAR
+================================================== */
+
+.popular-post-list {
+    width: 100%;
+}
+
+.popular-post-item {
+    border-color: var(--blog-border) !important;
+}
+
+.popular-post-title {
+    margin: 0;
+    color: var(--blog-text);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.popular-post-title a {
+    color: var(--blog-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.popular-post-title a:hover {
+    color: var(--blog-muted);
+}
+
+.popular-post-meta {
+    color: var(--blog-soft-text);
+    font-size: 0.76rem;
+}
+
+
+/* ==================================================
+   BOŞ LİSTE MESAJI
+================================================== */
+
+.blog-empty-message {
+    color: var(--blog-muted);
+    font-size: 0.9rem;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 991.98px) {
+    .blog-left-column {
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+    }
+
+    .blog-right-column {
+        margin-top: 4rem;
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        border-left: 0;
+    }
+
+    .sticky-sidebar {
+        position: static;
+    }
+}
+
+
+/* ==================================================
+   MOBİL
+================================================== */
+
+@media (max-width: 767.98px) {
+    .blog-hero {
+        padding-top: 2.75rem !important;
+        padding-bottom: 2.75rem !important;
+    }
+
+    .blog-page {
+        padding-top: 2.75rem !important;
+        padding-bottom: 2.75rem !important;
+    }
+
+    .custom-blog-card {
+        grid-template-columns: 1fr;
+        gap: 1.35rem;
+    }
+
+    .card-right-image {
+        grid-row: 1;
+        width: 100%;
+        height: 210px;
+    }
+
+    .card-left-content {
+        grid-row: 2;
+    }
+
+    .card-main-title {
+        font-size: 1.4rem;
+    }
+
+    .post-meta-info {
+        flex-wrap: wrap;
+        gap: 0.7rem !important;
+    }
+}
+
+
+/* ==================================================
+   ÇOK KÜÇÜK EKRAN
+================================================== */
+
+@media (max-width: 420px) {
+    .blog-page-title {
+        font-size: 2rem;
+    }
+
+    .card-bottom-meta {
+        align-items: flex-end !important;
+    }
+
+    .post-meta-info {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .card-right-image {
+        height: 185px;
+    }
+}
+
+.card-excerpt {
+    margin-top: 0.65rem;
+    max-width: 680px;
+    color: var(--blog-muted);
+    font-size: 0.93rem;
+    line-height: 1.6;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }

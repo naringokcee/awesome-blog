@@ -1,24 +1,141 @@
 ---
 layout: post-layout.html
-title: "Balkonda Cherry Domates Yetiştirme Serüvenim"
+title: "Java Öğreniyorum #1: Değişkenler, Veri Tipleri ve Scanner ile Kullanıcıdan Veri Alma"
 date: 2026-06-28
-category: "Bahçecilik"
-author: "Narin Gökçe"
-readingTime: "4 dk okuma"
-image: "/img/balkon-bahcecilik.png"  # Eğer varsa bu görsele uygun bir resim ekleyebilirsiniz
+category: Yazılım
+author: Narin Gökçe
+readingTime: 10 dk okuma
+image: "/img/java_foto.png"
 tags: posts
+description: "Java öğrenmeye başlarken göz korkutan uzun kod yapılarının arkasında aslında çok mantıklı ve sistemli bir yapı yatıyor. Bu yazıda Java'nın en temel iki yapı taşını detaylıca ve bol örnekle inceleyeceğiz: **Değişkenler** ve **Scanner ile Kullanıcıdan Girdi Alma**."
+
+
+
 ---
+Java öğrenmeye başlarken göz korkutan uzun kod yapılarının arkasında aslında çok mantıklı ve sistemli bir yapı yatıyor. Bu yazıda Java'nın en temel iki yapı taşını detaylıca ve bol örnekle inceleyeceğiz: **Değişkenler** ve **Scanner ile Kullanıcıdan Girdi Alma**.
 
-Balkonda bitki yetiştirmek, özellikle yoğun geçen kodlama seanslarının ardından benim için harika bir terapiye dönüştü. Bu yazıda, küçük bir balkonda doğru saksı seçimi ve sulama dengesiyle nasıl verimli cherry domates yetiştirilebileceğini kendi deneyimlerimle paylaşıyorum.
+### 1. Değişkenler (Variables) ve Temel Veri Tipleri
 
-### Serüven Nasıl Başladı?
-Her şey balkondaki saksılarıma domates ekebilir miyim sorusuyla başladı. Doğru toprak karışımını bulduktan sonra fidelerimi yerleştirdim. Şimdi ise canlandıklarını görmek inanılmaz bir keyif veriyor.
+Değişkenleri, bilgisayarın belleğinde (RAM) verilerimizi saklamak için oluşturduğumuz etiketli kutular gibi düşünebiliriz. Java "tip güvenli" (strongly typed) bir dil olduğu için, bir kutu oluştururken içine ne tür bir veri koyacağımızı baştan belirtmemiz gerekir.
 
-Balkonumda sadece domates yetiştirmekle kalmıyorum; kısa boylu minyatür güllerim ve krizantemlerim (kasımpatılarım) de domateslerime eşlik ediyor.
+Günlük kodlama pratiğinde en çok karşılaşacağımız 4 temel veri tipi şunlardır:
 
-### Dikkat Ettiğim Püf Noktaları:
-1. **Güneş Işığı:** Domatesler güneşi çok seviyor, bu yüzden balkonun en çok ışık alan köşesini onlara ayırdım.
-2. **Doğru Sulama:** Toprağın nemini her gün kontrol edip, çok fazla çamurlaştırmadan ama kurutmadan sulama yapıyorum.
-3. **Destek Çubukları:** Domatesler boy vermeye başladıkça dallarının kırılmaması için küçük destek çubukları kullanmaya başladım.
+*   **`int` (Integer):** Tam sayıları saklar.
+*   **`double`:** Ondalıklı sayıları saklar.
+*   **`String`:** Metinleri saklar (Çift tırnak içinde yazılır).
+*   **`boolean`:** Sadece `true` (doğru) veya `false` (yanlış) değerlerini alır.
 
-Eğer sizin de küçük bir balkonunuz varsa, birkaç saksı edinip bu yeşil dünyaya adım atmanızı kesinlikle tavsiye ederim!
+#### Örnek 1: Temel Değişken Tanımlama ve Yazdırma
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        // Değişkenlerin tanımlanması
+        String urunAdi = "Kablosuz Kulaklık";
+        double fiyati = 49.99;
+        int stokAdedi = 15;
+        boolean satisTami = true;
+
+        // Değişkenlerin ekrana basılması
+        System.out.println("Ürün Adı: " + urunAdi);
+        System.out.println("Fiyatı: " + fiyati + " EUR");
+        System.out.println("Stok Adedi: " + stokAdedi);
+        System.out.println("Satışta mı?: " + satisTami);
+    }
+}
+```
+
+
+
+#### Örnek 2: Değişkenlerle Matematiksel İşlemler
+
+Değişkenler sadece veri saklamaz, üzerlerinde işlem yapmamıza da olanak tanır:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        int baslangicSkoru = 100;
+        int kazanilanPuan = 50;
+        
+        // İki değişkeni toplayarak yeni bir değişkene atıyoruz
+        int toplamSkor = baslangicSkoru + kazanilanPuan;
+
+        System.out.println("Başlangıç: " + baslangicSkoru);
+        System.out.println("Kazanılan: " + kazanilanPuan);
+        System.out.println("Toplam Oyun Skoru: " + toplamSkor);
+    }
+}
+```
+
+
+### 2. Scanner Sınıfı ile Kullanıcıdan Veri Alma
+
+Kodlarımızın dinamik olması ve kullanıcı ile etkileşime geçebilmesi için dışarıdan veri almamız gerekir. Java'da bu işi yapmamızı sağlayan en temel yapı **`Scanner`** sınıfıdır.
+
+`Scanner` kullanırken dikkat edilmesi gereken iki nokta vardır:
+
+1. Dosyanın en üstüne `import java.util.Scanner;` satırını eklemek.
+2. Alacağımız veri tipine uygun metodu (`nextLine()`, `nextInt()`, `nextDouble()`) çağırmak.
+
+
+#### Örnek 3: Kullanıcı Profili Oluşturma
+
+```java
+import java.util.Scanner; // 1. Kütüphaneyi dahil ediyoruz
+
+public class Main {
+    public static void main(String[] args) {
+        // 2. Scanner nesnesini oluşturuyoruz
+        Scanner scanner = new Scanner(System.in);
+
+        // Kullanıcıdan metin (String) alma
+        System.out.print("Adınızı giriniz: ");
+        String isim = scanner.nextLine();
+
+        // Kullanıcıdan tam sayı (int) alma
+        System.out.print("Yaşınızı giriniz: ");
+        int yas = scanner.nextInt();
+
+        System.out.println("--------------------------------");
+        System.out.println("Sisteme kayıt başarılı! Hoş geldin " + isim + " (" + yas + ")");
+    }
+}
+
+```
+
+#### Örnek 4: Mini Hesap Makinesi (Uygulama Örneği)
+
+
+Kullanıcıdan iki farklı sayı alıp bunların toplamını ekrana yazdıran pratik bir uygulama:
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Birinci Sayıyı Giriniz: ");
+        int sayi1 = scanner.nextInt();
+
+        System.out.print("İkinci Sayıyı Giriniz: ");
+        int sayi2 = scanner.nextInt();
+
+        int toplam = sayi1 + sayi2;
+
+        System.out.println("--------------------------------");
+        System.out.println("Girdiğiniz Sayıların Toplamı: " + toplam);
+    }
+}
+```
+
+###  Özet & Temel İpuçları 💡
+
+**camelCase standardı:** 
+Java'da değişken isimleri yazılırken ilk kelime küçük, sonraki kelimelerin ilk harfi büyük yazılır (birinciSayi, kullaniciAdi gibi).
+
+**Yorum Satırları:**
+Tek satırlık açıklamalar için //, çok satırlı açıklamalar için /* ... */ yapısı kullanılır.
+
+**Print vs Println:**
+ System.out.println() yazdırıp alt satıra geçerken, System.out.print() imleci aynı satırda tutar (kullanıcıdan veri isterken kullanışlıdır).

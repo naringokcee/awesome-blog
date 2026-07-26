@@ -1,89 +1,425 @@
 ---
 layout: base.html
 title: Hakkımda
+description: Narin Gökçe'nin yazılım, Almanya ve öğrenme yolculuğu hakkında daha fazla bilgi edinin.
 ---
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Sayfa Başlığı (Sadece bu sayfaya özel kısım) -->
-<header class="py-5 border-bottom" style="background-color: #fafafa;">
-    <div class="container">
-        <div class="col-lg-8 ps-0">
-            <h1 class="fw-bold tracking-tight mb-2" style="font-size: 2.4rem; color: #111;">Merhaba, Ben Narin.</h1>
-            <p class="text-muted mb-0" style="font-size: 0.9rem; line-height: 1.5;">
-                Bilgisayar programcılığı mezunu bir yazılımcı ve Informatik öğrencisiyim. Kod yazmayı, doğayla ilgilenmeyi ve üretmeyi seviyorum.
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet"> 
+<div class="about-page">
+
+    <!-- Hero alanı -->
+    <header class="about-hero">
+        <div class="container">
+            <span class="about-eyebrow">Hakkımda</span>
+
+<h1 class="about-title">
+    Merhaba, ben <span class="about-name">Narin.</span>
+</h1>
+
+            <p class="about-introduction">
+                Almanya'da Bilgisayar Bilimi (Informatik) eğitimi alan; yazılım geliştirmeyi,
+                yeni teknolojileri keşfetmeyi ve öğrendiklerini paylaşmayı seven bir geliştiriciyim.
+                Burası yazılım, Almanya ve öğrenme yolculuğumun dijital günlüğü.
+            </p>
+
+            <p class="about-quote">
+                Merak ettikçe öğreniyor, öğrendikçe üretiyorum.
             </p>
         </div>
-    </div>
-</header>
+    </header>
 
-<!-- Ana İçerik Alanı -->
-<main class="container my-5">
-    <div class="row g-5">
-        
-        <!-- Sol Taraf: Detaylı Hikaye & Biyografi -->
-        <div class="col-lg-8">
-            <article class="about-story pe-lg-4">
-                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; letter-spacing: -0.01em;">Eğitim ve Yazılım Serüvenim</h3>
-                <p class="text-muted leading-relaxed">
-                    Çukurova Üniversitesi Bilgisayar Programcılığı bölümünden mezun olduktan sonra, teknolojiye ve yazılıma olan tutkumun peşinden giderek Almanya macerama başladım. Şu anda Würzburg Üniversitesi'nde Informatik (Bilgisayar Bilimleri) birinci dönem öğrencisiyim. 
-                </p>
-                <p class="text-muted leading-relaxed">
-                    Teorik bilgisayar bilimleri eğitimimin yanında, pratik projeler geliştirmeye büyük önem veriyorum. Özellikle mobil oyun geliştirme dünyası beni çok heyecanlandırıyor. Unity oyun motorunu kullanarak harita temelli, kullanıcıların yaratıcılığını ve coğrafya bilgisini sınayan mobil oyun projeleri üzerinde çalışıyorum.
-                </p>
+    <!-- Ana içerik -->
+    <main class="about-content">
+        <div class="container">
+            <div class="row g-5">
 
-                <hr class="my-4" style="border-color: var(--border-color); opacity: 0.1;">
+                <!-- Sol taraf: Hikâye -->
+                <div class="col-lg-8">
+                    <article class="about-article">
 
-                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; letter-spacing: -0.01em;">Yalnızca Kod Değil: Yaşam ve Hobiler</h3>
-                <p class="text-muted leading-relaxed">
-                    Ekran başından kalktığımda beni dinlendiren ve tazeleyen iki büyük tutkum var: toprak ve müzik.
-                </p>
-                <ul class="list-unstyled d-flex flex-column gap-2 my-3 text-muted" style="font-size: 0.9rem;">
-                    <li><i class="fa-solid fa-seedling text-dark me-2"></i> <strong>Balkon Bahçeciliği:</strong> Küçük balkonumda minyatür güller, krizantemler ve kendi yetiştirdiğim cherry domateslerle ilgilenerek doğayla bağımı koparmıyorum.</li>
-                    <li><i class="fa-solid fa-guitar text-dark me-2"></i> <strong>Ukulele:</strong> Temel akor geçişleri üzerinde pratik yaparak, günün yorgunluğunu hafif akustik melodilerle atmayı seviyorum.</li>
-                </ul>
-                <p class="text-muted leading-relaxed">
-                    Bu kişisel web sitesi ve blog; hem teknik yolculuğumda aldığım notları paylaşabileceğim, hem de okuduğum kişisel gelişim kitaplarının incelemelerini biriktirebileceğim benim adıma küçük bir dijital kütüphane.
-                </p>
-            </article>
-        </div>
+                        <!-- Hikâyem -->
+                        <section class="about-section" id="hikayem">
+                            <span class="about-section-label">01 — Başlangıç</span>
+                            <h2 class="about-section-title">Hikâyem</h2>
 
-        <!-- Sağ Taraf: Profil Kartı ve Hızlı Bilgiler -->
-        <div class="col-lg-4">
-            <div class="d-flex flex-column gap-4">
-                
-                <div class="p-4 border rounded-3 bg-light" style="border-color: var(--border-color) !important;">
-                    <!-- Profil Fotoğrafı / Baş Harf Avatar Alanı -->
-                    <div class="about-avatar-holder mb-3">
-                        <div class="avatar-fallback">NG</div>
-                    </div>
-                    <h5 class="fw-bold mb-1">Narin Gökçe</h5>
-                    <p class="text-muted" style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Informatik Student & Developer</p>
-                    
-                    <hr class="my-3">
+                            <p>
+                                Hikâyem, Akdeniz'in sıcak şehri <strong>Mersin'de</strong> başladı.
+                                Çocukluğum palmiyelerin gölgesinde geçti. O yıllarda bir gün
+                                Almanya'da yaşayacağımı ya da yazılımın hayatımın merkezine
+                                yerleşeceğini tahmin bile edemezdim.
+                            </p>
 
-                    <!-- Hızlı Bilgiler -->
-                    <ul class="list-unstyled d-flex flex-column gap-2" style="font-size: 0.85rem;">
-                        <li class="d-flex justify-content-between">
-                            <span class="text-muted">Konum:</span>
-                            <span class="fw-medium text-dark">Würzburg, Almanya</span>
-                        </li>
-                        <li class="d-flex justify-content-between">
-                            <span class="text-muted">Eğitim:</span>
-                            <span class="fw-medium text-dark">Würzburg Üniversitesi</span>
-                        </li>
-                        <li class="d-flex justify-content-between">
-                            <span class="text-muted">Odak Alanı:</span>
-                            <span class="fw-medium text-dark">Unity & C#</span>
-                        </li>
-                    </ul>
+                            <p>
+                                Yazılımla tanışmam üniversite yıllarında oldu. Çukurova Üniversitesi
+                                Bilgisayar Programcılığı bölümünde eğitim alırken teknolojiye olan
+                                ilgimin aslında uzun zamandır içimde olduğunu fark ettim.
+                                Problemleri çözmek, üretmek ve sürekli yeni şeyler öğrenmek
+                                bana büyük keyif veriyordu.
+                            </p>
 
-                    <div class="d-flex gap-2 mt-3 pt-2 border-top">
-                        <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline-dark w-100" style="font-size: 0.75rem;"><i class="fa-brands fa-github me-1"></i> GitHub</a>
-                        <a href="/iletisim/" class="btn btn-sm btn-dark w-100" style="font-size: 0.75rem;"><i class="fa-solid fa-envelope me-1"></i> İletişim</a>
-                    </div>
+                            <div class="about-highlight">
+                                <p>
+                                    Zamanla öğrenmek kadar, öğrendiklerimi başkalarına anlatmayı da
+                                    sevdiğimi keşfettim. Belki de bu blogun temeli tam olarak o
+                                    günlerde atıldı.
+                                </p>
+                            </div>
+                        </section>
+
+                        <!-- Neden Almanya -->
+                        <section class="about-section" id="neden-almanya">
+                            <span class="about-section-label">02 — Yeni Bir Sayfa</span>
+                            <h2 class="about-section-title">Neden Almanya?</h2>
+
+                            <p>
+                                Üniversiteyi bitirdikten sonra kendi alanımda çalışabilmek için
+                                uzun süre çabaladım. Elimden geleni yapmama rağmen istediğim
+                                fırsatları yakalayamadım.
+                            </p>
+
+                            <p>
+                                Bugün geriye dönüp baktığımda bu sürece farklı bir gözle
+                                bakabiliyorum. Çünkü yaşadıklarım beni Almanca öğrenmeye,
+                                yeni bir ülkede yaşamaya ve Almanya'da eğitim almaya yönlendirdi.
+                            </p>
+
+                            <p>
+                                Uzun bir hazırlık döneminin ardından Würzburg'a geldim ve
+                                hayatımda tamamen yeni bir sayfa açıldı. Bu yolculuk bana yalnızca
+                                yeni bir ülke değil; yeni bir bakış açısı, yeni insanlar ve
+                                birbirinden farklı deneyimler kazandırdı.
+                            </p>
+
+                            <p>
+                                Almanya'ya geliş sürecim ise birkaç paragrafa sığmayacak kadar
+                                uzun ve öğretici bir hikâye. Bu nedenle yolculuğumun tamamını
+                                ayrı bir blog yazısında anlatacağım.
+                            </p>
+                        </section>
+
+                        <!-- Neden bu blog -->
+                        <section class="about-section" id="neden-blog">
+                            <span class="about-section-label">03 — Paylaşma İsteği</span>
+                            <h2 class="about-section-title">Neden bu blog?</h2>
+
+                            <p>
+                                Aslında bu blog bir anda ortaya çıkmadı. Uzun zamandır aklımda
+                                olan fakat hayata geçirmek için sürekli doğru zamanı beklediğim
+                                bir fikirdi.
+                            </p>
+
+                            <p>
+                                Ne zaman yeni bir şey öğrensem, onu çevremdeki insanlarla
+                                paylaşmak isterdim. Bir konuyu anlatırken hem karşımdaki kişinin
+                                faydalanması hem de benim o bilgiyi yeniden öğrenmem hoşuma
+                                gidiyordu.
+                            </p>
+
+                            <div class="about-highlight">
+                                <p>
+                                    “Madem öğrendiklerimi paylaşmayı bu kadar seviyorum,
+                                    neden bunu daha fazla insanla paylaşmayayım?”
+                                </p>
+                            </div>
+
+                            <p>
+                                İşte bu blog, o sorunun cevabı. Burada yalnızca yazılım değil;
+                                Almanya'daki hayatım, öğrendiğim dersler, okuduğum kitaplar,
+                                geliştirdiğim projeler ve zamanla edindiğim deneyimler de
+                                yer alacak.
+                            </p>
+
+                            <p>
+                                Belki ileride farklı yazarlar da bu yolculuğa katılır.
+                                Kim bilir, belki bu küçük blog zamanla birlikte öğrenen ve
+                                üreten insanların buluştuğu güzel bir topluluğa dönüşür.
+                            </p>
+                        </section>
+
+                        <!-- Şu anda -->
+                        <section class="about-section" id="su-anda">
+                            <span class="about-section-label">04 — Bugün</span>
+                            <h2 class="about-section-title">Şu anda ne yapıyorum?</h2>
+
+                            <p>
+                                Şu anda Würzburg'da hazırlık niteliğinde geçen akademik dönemimi
+                                tamamlıyor ve yeni dönemde Bilgisayar Bilimi (Informatik)
+                                eğitimime devam etmeye hazırlanıyorum.
+                            </p>
+
+                            <p>
+                                Bunun yanında yarı zamanlı çalışıyor, <strong>Java</strong>
+                                öğreniyor ve üniversitede karşılaşacağım dersler için şimdiden
+                                temel oluşturuyorum.
+                            </p>
+
+                            <p>
+                                Teknik Almanca ve günlük Almanca da bu yolculuğun önemli bir
+                                parçası. Almanya'ya geldiğim ilk günden beri dilimi geliştirmek
+                                için çalışıyorum. Bu süreç her zaman kolay olmasa da bana
+                                kattıklarının yaşadığım zorluklardan çok daha değerli olduğuna
+                                inanıyorum.
+                            </p>
+
+                            <p>
+                                Öğrendiğim Java konularını not alıyor, tekrar ediyor ve zamanla
+                                blog yazılarına dönüştürüyorum. Yakında teknik içeriklerimi ve
+                                geliştirdiğim küçük projeleri de burada paylaşmaya başlayacağım.
+                            </p>
+                        </section>
+
+                        <!-- İlgi alanları -->
+                        <section class="about-section" id="ilgi-alanlarim">
+                            <span class="about-section-label">05 — Hayatın Diğer Tarafı</span>
+                            <h2 class="about-section-title">Neler ilgimi çekiyor?</h2>
+
+                            <p>
+                                Tek bir ilgi alanım olduğunu söyleyemem. Sanırım beni en iyi
+                                anlatan kelime <strong>merak</strong>.
+                            </p>
+
+                            <p>
+                                Öğrenmeyi, üretmeyi, gezmeyi, hareket etmeyi ve bana yeni şeyler
+                                katan deneyimlerin içinde olmayı seviyorum. Bilgi konusunda biraz
+                                açgözlü olabilirim.
+                            </p>
+
+                            <div class="about-interests">
+
+                                <div class="about-interest">
+                                    <span class="about-interest-icon">
+                                        <i class="fa-solid fa-laptop-code"></i>
+                                    </span>
+                                    <div>
+                                        <h3>Yazılım ve teknoloji</h3>
+                                        <p>
+                                            Yeni teknolojileri keşfetmeyi, kod yazmayı ve
+                                            öğrendiklerimi projelere dönüştürmeyi seviyorum.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="about-interest">
+                                    <span class="about-interest-icon">
+                                        <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                                    </span>
+                                    <div>
+                                        <h3>Masa tenisi ve spor</h3>
+                                        <p>
+                                            Uzun yıllardır masa tenisi oynuyorum. Spor artık
+                                            hayatımın ve karakterimin önemli bir parçası.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="about-interest">
+                                    <span class="about-interest-icon">
+                                        <i class="fa-solid fa-book-open"></i>
+                                    </span>
+                                    <div>
+                                        <h3>Kitaplar ve araştırma</h3>
+                                        <p>
+                                            Kişisel gelişim, girişimcilik, teknoloji ve bilim
+                                            üzerine okumaktan keyif alıyorum.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="about-interest">
+                                    <span class="about-interest-icon">
+                                        <i class="fa-solid fa-camera-retro"></i>
+                                    </span>
+                                    <div>
+                                        <h3>Fotoğraf ve seyahat</h3>
+                                        <p>
+                                            Yeni yerler keşfetmeyi ve gezdiğim yerleri kendi
+                                            bakış açımdan fotoğraflamayı seviyorum.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="about-interest">
+                                    <span class="about-interest-icon">
+                                        <i class="fa-solid fa-brain"></i>
+                                    </span>
+                                    <div>
+                                        <h3>Yapay zekâ</h3>
+                                        <p>
+                                            Yapay zekâyı yalnızca kullanmayı değil, doğru ve
+                                            üretken biçimde kullanmayı öğrenmek istiyorum.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="about-interest">
+                                    <span class="about-interest-icon">
+                                        <i class="fa-solid fa-language"></i>
+                                    </span>
+                                    <div>
+                                        <h3>Diller ve kültürler</h3>
+                                        <p>
+                                            Yeni diller öğrenmenin ve farklı kültürlerle
+                                            tanışmanın dünyaya bakışımı zenginleştirdiğine inanıyorum.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <!-- Kapanış -->
+                        <section class="about-section" id="son-olarak">
+                            <div class="about-closing">
+                                <h2>Son olarak...</h2>
+
+                                <p>
+                                    Eğer buraya kadar okuduysan, muhtemelen ortak bir merakımız var.
+                                </p>
+
+                                <p>
+                                    Bu blogda mükemmel bir geliştiricinin hikâyesini değil,
+                                    her gün biraz daha öğrenmeye çalışan bir öğrencinin
+                                    yolculuğunu okuyacaksın.
+                                </p>
+
+                                <p>
+                                    Umarım burada paylaştığım deneyimler sana yeni bir fikir verir,
+                                    bir soruna çözüm olur ya da yalnızca keyifli birkaç dakika
+                                    geçirmeni sağlar.
+                                </p>
+
+                                <p>
+                                    Yolumuzun tekrar bu blogda kesişmesi dileğiyle.
+                                    <strong class="text-white">Hoş geldin.</strong>
+                                </p>
+                            </div>
+                        </section>
+
+                    </article>
                 </div>
+
+                <!-- Sağ taraf: Profil kartı -->
+                <aside class="col-lg-4">
+                    <div class="about-sidebar">
+
+                        <div class="about-profile-card">
+                            <div class="about-profile-top">
+                                <!-- Daha sonra avatar yerine profil görseli ekleyebilirsin -->
+                                <div class="about-avatar" aria-label="Narin Gökçe">
+                                    NG
+                                </div>
+
+                                <h2 class="about-profile-name">Narin Gökçe</h2>
+
+                                <p class="about-profile-role">
+                                    Informatik Öğrencisi &amp; Geliştirici
+                                </p>
+                            </div>
+
+                            <div class="about-profile-body">
+                                <ul class="about-info-list">
+
+                                    <li class="about-info-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <div>
+                                            <span class="about-info-label">Konum</span>
+                                            <span class="about-info-value">
+                                                Würzburg, Almanya
+                                            </span>
+                                        </div>
+                                    </li>
+
+                                    <li class="about-info-item">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                        <div>
+                                            <span class="about-info-label">Eğitim</span>
+                                            <span class="about-info-value">
+                                                Bilgisayar Mühendisliği (Informatik)
+                                            </span>
+                                        </div>
+                                    </li>
+
+                                    <li class="about-info-item">
+                                        <i class="fa-solid fa-code"></i>
+                                        <div>
+                                            <span class="about-info-label">Şimdiki Odak</span>
+                                            <span class="about-info-value">
+                                                Java ve programlama temelleri
+                                            </span>
+                                        </div>
+                                    </li>
+
+                                    <li class="about-info-item">
+                                        <i class="fa-solid fa-language"></i>
+                                        <div>
+                                            <span class="about-info-label">Öğreniyorum</span>
+                                            <span class="about-info-value">
+                                                Teknik Almanca
+                                            </span>
+                                        </div>
+                                    </li>
+
+                                    <li class="about-info-item">
+                                        <i class="fa-solid fa-pen-nib"></i>
+                                        <div>
+                                            <span class="about-info-label">Üretiyorum</span>
+                                            <span class="about-info-value">
+                                                Blog yazıları ve yazılım projeleri
+                                            </span>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                                <div class="about-skills">
+                                    <p class="about-skills-title">İlgi Alanlarım</p>
+
+                                    <div class="about-tag-list">
+                                        <span class="about-tag">Yazılım</span>
+                                        <span class="about-tag">Informatik</span>
+                                        <span class="about-tag">Almanya</span>
+                                        <span class="about-tag">Fotoğrafçılık</span>
+                                        <span class="about-tag">Girişimcilik</span>
+                                        <span class="about-tag">Masa Tenisi</span>
+                                        <span class="about-tag">Kitap</span>
+                                    </div>
+                                </div>
+
+                                <div class="about-profile-actions">
+                                    <!-- Buraya kendi GitHub adresini yaz -->
+                                    <a
+                                        href="https://github.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="btn btn-outline-dark"
+                                    >
+                                        <i class="fa-brands fa-github me-1"></i>
+                                        GitHub
+                                    </a>
+
+                                    <a href="/iletisim/" class="btn btn-dark">
+                                        <i class="fa-solid fa-envelope me-1"></i>
+                                        İletişim
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-note-card">
+                            <i class="fa-solid fa-seedling"></i>
+                            <p>
+                                Bu sayfa da benimle birlikte değişmeye ve gelişmeye devam edecek.
+                                Çünkü henüz yolun başındayım.
+                            </p>
+                        </div>
+
+                    </div>
+                </aside>
 
             </div>
         </div>
+    </main>
 
-    </div>
-</main>
+</div>

@@ -9,7 +9,9 @@
     <!-- FontAwesome İkonları -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Senin CSS Dosyan -->
+    
     <link rel="stylesheet" href="/style.css">
+<script src="/script.js"></script>
 </head>
 <body>
 
@@ -38,6 +40,9 @@
         <a href="/hakkimda/" class="nav-link ">Hakkımda</a>
     </li>
     <li class="nav-item">
+        <a href="/#/" class="nav-link ">Projelerim</a>
+    </li>
+    <li class="nav-item">
         <a href="/iletisim/" class="nav-link ">İletişim</a>
     </li>
 </ul>
@@ -64,22 +69,25 @@
 <body>
 
 <!-- Giriş Bölümü (Hero) -->
-<header class="py-5" style="background-color: #fafafa;">
+<header class="hero-section">
     <div class="container my-2">
         <div class="row align-items-center g-4">
             <div class="col-md-7 text-start">
                 <div class="d-flex align-items-center gap-2 mb-3">
                     <span class="dot-animation"></span>
-                    <span class="text-muted small fw-medium tracking-wider text-uppercase">Geliştirici & Tasarımcı</span>
+                    <span class="text-muted small fw-medium tracking-wider text-uppercase">Girişimci & Araştırmacı</span>
                 </div>
-                <h1 class="fw-bold tracking-tight mb-3" style="font-size: 2.2rem; line-height: 1.25; color: #111;">
-                    Fikirlerimi koda dökerken, hayatımdan küçük kesitler paylaşıyorum.
+                
+                <!-- Satır içi style kaldırıldı, .hero-title sınıfı eklendi -->
+                <h1 class="hero-title fw-bold tracking-tight mb-3">
+                    Yazılım, teknoloji ve yaşam üzerine düşünen, araştıran ve üreten bir geliştiricinin dijital günlüğü.
                 </h1>
-                <p class="text-muted mb-4" style="max-width: 500px; line-height: 1.6; font-size: 0.9rem;">
-                    Merhaba, ben Narin. Bilgisayar dünyasindeki projelerimden, balkondaki çiçeklerimle geçen sakin
-                    günlere; okuduğum kitaplardan müzik yolculuğuma kadar her şeyi paylaştığım kişisel alanıma hoş
-                    geldin.
+                
+                <!-- Altındaki Küçük Etiketler -->
+                <p class="hero-tags mb-4">
+                    • Yazılım • Almanya • Girişimcilik • Kişisel Gelişim
                 </p>
+                
                 <div class="d-flex gap-2">
                     <a href="/hakkimda/" class="btn btn-dark">Benimle Tanış</a>
                     <a href="/blog/" class="btn btn-outline-dark">Yazılarımı Oku</a>
@@ -97,49 +105,68 @@
 
 <!-- Kategoriler (Sadece İkonlar Mor Detaylı) -->
 
-    <!-- Kategoriler (Sadece İkonlar Mor Detaylı) -->
-    <section class="py-4 border-top border-bottom" style="background-color: #ffffff;">
-        <div class="container">
-            <div class="row g-3">
-                <div class="col-6 col-lg-3">
-                    <div class="d-flex align-items-center gap-3 p-1">
-                        <div class="icon-box"><i class="fa-solid fa-code"></i></div>
-                        <div>
-                            <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">Geliştirme</h6>
-                            <span class="text-muted" style="font-size: 0.75rem;">Unity & Projeler</span>
-                        </div>
+<section class="py-4 border-top border-bottom category-section">
+    <div class="container">
+        <!-- Kaydırılabilir Kutu -->
+        <div class="category-scroll-wrapper">
+            
+            <!-- 1. Geliştirme -->
+            <div class="col">
+                <div class="d-flex align-items-center gap-3 p-1">
+                    <div class="icon-box"><i class="fa-solid fa-code"></i></div>
+                    <div>
+                        <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">Geliştirme</h6>
+                        <span class="text-muted" style="font-size: 0.75rem;">Unity & Projeler</span>
                     </div>
                 </div>
-                <div class="col-6 col-lg-3">
-                    <div class="d-flex align-items-center gap-3 p-1">
-                        <div class="icon-box"><i class="fa-solid fa-seedling"></i></div>
-                        <div>
-                            <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">Bahçecilik</h6>
-                            <span class="text-muted" style="font-size: 0.75rem;">Balkon Günlüğü</span>
-                        </div>
+            </div>
+
+            <!-- 2. Almanya -->
+            <div class="col">
+                <div class="d-flex align-items-center gap-3 p-1">
+                    <div class="icon-box"><i class="fa-solid fa-earth-europe"></i></div>
+                    <div>
+                        <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">Almanya</h6>
+                        <span class="text-muted" style="font-size: 0.75rem;">Almanya Günlüğü</span>
                     </div>
                 </div>
-                <div class="col-6 col-lg-3">
-                    <div class="d-flex align-items-center gap-3 p-1">
-                        <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
-                        <div>
-                            <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">Kitaplar</h6>
-                            <span class="text-muted" style="font-size: 0.75rem;">Özet & Analizler</span>
-                        </div>
+            </div>
+
+            <!-- 3. Kitaplar -->
+            <div class="col">
+                <div class="d-flex align-items-center gap-3 p-1">
+                    <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
+                    <div>
+                        <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">Kitaplar</h6>
+                        <span class="text-muted" style="font-size: 0.75rem;">Notlar & Analizler</span>
                     </div>
                 </div>
-                <div class="col-6 col-lg-3">
-                    <div class="d-flex align-items-center gap-3 p-1">
-                        <div class="icon-box"><i class="fa-solid fa-music"></i></div>
-                        <div>
-                            <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">Müzik</h6>
-                            <span class="text-muted" style="font-size: 0.75rem;">Ukulele & Pop</span>
-                        </div>
+            </div>
+
+            <!-- 4. Girişimcilik -->
+            <div class="col">
+                <div class="d-flex align-items-center gap-3 p-1">
+                    <div class="icon-box"><i class="fa-solid fa-rocket"></i></div>
+                    <div>
+                        <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">Girişimcilik</h6>
+                        <span class="text-muted" style="font-size: 0.75rem;">Proje & Startup</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Motivasyon -->
+            <div class="col">
+                <div class="d-flex align-items-center gap-3 p-1">
+                    <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
+                    <div>
+                        <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">Motivasyon</h6>
+                        <span class="text-muted" style="font-size: 0.75rem;">Kişisel Gelişim</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Son Yazılar & Öne Çıkanlar -->
     <section class="py-5" style="background-color: #fafafa;">
@@ -214,7 +241,7 @@
     <!-- Footer (Ortak) -->
     <footer class="py-4 border-top text-center text-muted" style="font-size: 0.8rem; background-color: #fafafa;">
         <div class="container">
-            <p class="mb-0">© 2026 Narin Gökçe. Tüm Hakları Saklıdır.</p>
+            <p class="mb-0">© 2026 Narin Gökçe. Tüm Hakları Saklıdır. Made with ❤️ by Narin</p>
         </div>
     </footer>
 

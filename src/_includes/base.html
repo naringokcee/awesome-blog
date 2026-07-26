@@ -9,7 +9,9 @@
     <!-- FontAwesome İkonları -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Senin CSS Dosyan -->
+    
     <link rel="stylesheet" href="/style.css">
+<script src="/script.js"></script>
 </head>
 <body>
 
@@ -38,6 +40,9 @@
         <a href="/hakkimda/" class="nav-link {% if page.url contains '/hakkimda/' %}active{% endif %}">Hakkımda</a>
     </li>
     <li class="nav-item">
+        <a href="/#/" class="nav-link {% if page.url contains '/projelerim/' %}active{% endif %}">Projelerim</a>
+    </li>
+    <li class="nav-item">
         <a href="/iletisim/" class="nav-link {% if page.url contains '/iletisim/' %}active{% endif %}">İletişim</a>
     </li>
 </ul>
@@ -61,7 +66,7 @@
     <!-- Footer (Ortak) -->
     <footer class="py-4 border-top text-center text-muted" style="font-size: 0.8rem; background-color: #fafafa;">
         <div class="container">
-            <p class="mb-0">© 2026 Narin Gökçe. Tüm Hakları Saklıdır.</p>
+            <p class="mb-0">© 2026 Narin Gökçe. Tüm Hakları Saklıdır. Made with ❤️ by Narin</p>
         </div>
     </footer>
 

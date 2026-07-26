@@ -5,8 +5,9 @@ date: 2026-07-15
 category: "Geliştirme"
 author: "Narin Gökçe"
 readingTime: "6 dk okuma"
-image: "/img/unity-project.png"
+image: "src/img/kitap.png"
 tags: posts
+description: "Unity projelerinde oyuncunun belirlenen alanın dışına çıkmasını önlemek için kullanılabilecek sınır çizme yöntemlerini ve karşılaştığım çözümleri paylaşıyorum."
 ---
 
 Buraya yazının içeriği gelecek...
