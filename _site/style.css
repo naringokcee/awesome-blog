@@ -2121,18 +2121,3 @@ body.dark-mode {
     overflow: hidden;
 }
 
-.navbar {
-  height: 70px;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  overflow: visible;
-}
-
-.logo {
-  width: 73px;
-  height: 73px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
