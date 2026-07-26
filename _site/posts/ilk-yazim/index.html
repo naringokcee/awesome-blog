@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity'de Sınır Çizme Mekaniği ve Çözümler | Narin Gökçe</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome İkonları -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Senin CSS Dosyan -->
+    
+    <link rel="stylesheet" href="/style.css">
+<script src="/script.js"></script>
+</head>
+<body>
+
+    <!-- Navigasyon Menüsü (Ortak Siyah Navbar) -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a href="/index.html" class="navbar-brand d-flex align-items-center">
+                <img src="/img/navlogo3.png"  alt="Logo" class="logo";">
+                <span class="fw-semibold">Narin Gökçe</span>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mobile">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div id="mobile" class="collapse navbar-collapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0 gap-1 align-items-center">
+    <li class="nav-item">
+        <!-- Ana sayfa için sadece slash (/) yeterli -->
+        <a href="/" class="nav-link ">Ana Sayfa</a>
+    </li>
+    <li class="nav-item">
+        <a href="/blog/" class="nav-link ">Blog Yazılarım</a>
+    </li>
+    <li class="nav-item">
+        <a href="/hakkimda/" class="nav-link ">Hakkımda</a>
+    </li>
+    <li class="nav-item">
+        <a href="/#/" class="nav-link ">Projelerim</a>
+    </li>
+    <li class="nav-item">
+        <a href="/iletisim/" class="nav-link ">İletişim</a>
+    </li>
+</ul>
+                <!-- Arama Çubuğu & Tema Butonu -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="search-box-wrapper">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Ara...">
+                    </div>
+                    <button id="dark-mode-toggle" type="button" class="btn p-2 text-white" title="Temayı Değiştir">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dinamik İçerik Buraya Gelecek -->
+    
+<article class="py-5" style="background-color: #ffffff;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                
+                <!-- Üst Bilgiler (Kategori & Tarih) -->
+                <div class="text-muted small mb-3" style="text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">
+                    <span style="color: #555;">Geliştirme</span>
+                    <span class="mx-2">•</span>
+                    <span>15.07.2026</span>
+                </div>
+
+                <!-- Büyük Yazı Başlığı -->
+                <h1 class="fw-bold mb-4" style="font-size: 2.6rem; line-height: 1.2; letter-spacing: -0.02em; color: #111;">
+                    Unity'de Sınır Çizme Mekaniği ve Çözümler
+                </h1>
+
+                <!-- Yazar & Okuma Süresi -->
+                <div class="d-flex align-items-center gap-3 text-muted small mb-5 pb-4 border-bottom" style="font-size: 0.85rem;">
+                    <span><i class="fa-regular fa-user me-1"></i> Narin Gökçe</span>
+                    <span><i class="fa-regular fa-clock me-1"></i> 6 dk okuma</span>
+                </div>
+
+                <!-- Öne Çıkarılan Görsel (Eğer varsa gösterilir) -->
+                
+                <div class="mb-5" style="border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+                    <img src="src/img/kitap.png" class="img-fluid w-100" alt="Unity'de Sınır Çizme Mekaniği ve Çözümler" style="object-fit: cover; max-height: 450px;">
+                </div>
+                
+
+                <!-- Markdown İçeriği (Yazının Kendisi) -->
+                <div class="post-content" style="font-size: 1.05rem; line-height: 1.8; color: #2c3e50;">
+                    <p>Buraya yazının içeriği gelecek...</p>
+<p>Almanya'ya ayak basmamın üzerinden tam bir yıl geçti. Geriye dönüp baktığımda, bu sürecin hem kişisel gelişimim hem de bir yazılımcı olarak ufkumu açması açısından hayatımın en önemli dönüm noktalarından biri olduğunu görebiliyorum.</p>
+<p>Şu an <strong>Würzburg Üniversitesi</strong>'nde Informatik okuyorum ve dersler tam gaz devam ediyor. Teorik derslerin yanında pratik projeler geliştirmek benim için her zaman öncelikli oldu.</p>
+<h3>Neler Yapıyorum?</h3>
+<ul>
+<li><strong>Unity ile Mobil Oyun:</strong> Boş zamanlarımda Unity oyun motorunu kullanarak harita temelli bir coğrafya oyunu geliştiriyorum.</li>
+<li><strong>Balkon Bahçeciliği:</strong> Balkonumda yetiştirdiğim cherry domatesler ve minyatür güller bana ekran başından uzaklaşıp nefes alma fırsatı sunuyor.</li>
+<li><strong>Müzik:</strong> Çalışma aralarında ukulele çalmak zihnimi inanılmaz derecede dinlendiriyor.</li>
+</ul>
+<p>Bu blogda, hem bu serüvende karşılaştığım teknik detayları hem de kişisel gelişim yolculuğumu sizlerle paylaşacağım!</p>
+
+                </div>
+
+                <!-- Geri Dönüş Linki -->
+                <div class="mt-5 pt-4 border-top">
+                    <a href="/blog/" class="btn btn-outline-secondary btn-sm" style="border-radius: 20px; padding: 6px 16px;">
+                        <i class="fa-solid fa-arrow-left me-2"></i> Blog Yazılarına Dön
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- Markdown yazılarının içindeki başlık ve paragrafları daha estetik göstermek için küçük CSS eklemesi -->
+<style>
+    .post-content p {
+        margin-bottom: 1.5rem;
+    }
+    .post-content h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: #111;
+    }
+    .post-content ul {
+        margin-bottom: 1.5rem;
+        padding-left: 1.2rem;
+    }
+    .post-content li {
+        margin-bottom: 0.5rem;
+    }
+</style>
+
+    <!-- Footer (Ortak) -->
+    <footer class="py-4 border-top text-center text-muted" style="font-size: 0.8rem; background-color: #fafafa;">
+        <div class="container">
+            <p class="mb-0">© 2026 Narin Gökçe. Tüm Hakları Saklıdır. Made with ❤️ by Narin</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>

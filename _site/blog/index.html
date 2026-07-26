@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Yazılarım | Narin Gökçe</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome İkonları -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Senin CSS Dosyan -->
+    
+    <link rel="stylesheet" href="/style.css">
+<script src="/script.js"></script>
+</head>
+<body>
+
+    <!-- Navigasyon Menüsü (Ortak Siyah Navbar) -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a href="/index.html" class="navbar-brand d-flex align-items-center">
+                <img src="/img/navlogo3.png"  alt="Logo" class="logo";">
+                <span class="fw-semibold">Narin Gökçe</span>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mobile">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div id="mobile" class="collapse navbar-collapse">
+<ul class="navbar-nav me-auto mb-2 mb-md-0 gap-1 align-items-center">
+    <li class="nav-item">
+        <!-- Ana sayfa için sadece slash (/) yeterli -->
+        <a href="/" class="nav-link ">Ana Sayfa</a>
+    </li>
+    <li class="nav-item">
+        <a href="/blog/" class="nav-link active">Blog Yazılarım</a>
+    </li>
+    <li class="nav-item">
+        <a href="/hakkimda/" class="nav-link ">Hakkımda</a>
+    </li>
+    <li class="nav-item">
+        <a href="/#/" class="nav-link ">Projelerim</a>
+    </li>
+    <li class="nav-item">
+        <a href="/iletisim/" class="nav-link ">İletişim</a>
+    </li>
+</ul>
+                <!-- Arama Çubuğu & Tema Butonu -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="search-box-wrapper">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Ara...">
+                    </div>
+                    <button id="dark-mode-toggle" type="button" class="btn p-2 text-white" title="Temayı Değiştir">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dinamik İçerik Buraya Gelecek -->
+    
+<section class="blog-hero py-5 border-bottom">
+    <div class="container">
+        <div class="col-lg-8 ps-0">
+            <h1 class="blog-page-title fw-bold mb-2">
+                Blog Yazılarım
+            </h1>
+
+            <p class="blog-page-description mb-0">
+                Yazılım serüvenimden notlar, okuduğum kitapların analizleri
+                ve hayatımdan küçük denemeler. Merak ettiklerinizi
+                kategorilere göre filtreleyerek okuyabilirsiniz.
+            </p>
+        </div>
+    </div>
+</section>
+
+<main class="blog-page py-5">
+    <div class="container">
+        <div class="row g-lg-5">
+
+            <!-- Blog yazıları -->
+            <div class="col-lg-8 blog-left-column">
+                <div class="blog-post-list d-flex flex-column gap-5"><article class="custom-blog-card pb-5 border-bottom">
+
+                        <div class="card-left-content">
+
+                            <div class="card-top-meta mb-2">
+                                <span class="meta-category text-uppercase">
+                                    Yazılım
+                                </span>
+
+                                <span class="meta-divider">•</span>
+
+                                <time
+                                    class="meta-date"
+                                    datetime="2026-06-28"
+                                >
+                                    28 Haziran 2026
+                                </time>
+                            </div>
+
+                            <h2 class="card-main-title mb-2">
+                                <a href="/posts/balkon-domates/">
+                                    Java Öğreniyorum #1: Değişkenler, Veri Tipleri ve Scanner ile Kullanıcıdan Veri Alma
+                                </a>
+                            </h2>
+
+                            
+                            <p class="card-excerpt mb-3">
+                                Java öğrenmeye başlarken göz korkutan uzun kod yapılarının arkasında aslında çok mantıklı ve sistemli bir yapı yatıyor. Bu yazıda Java'nın en temel iki yapı taşını detaylıca ve bol örnekle inceleyeceğiz: **Değişkenler** ve **Scanner ile Kullanıcıdan Girdi Alma**.
+                            </p>
+                            
+
+                            <div class="card-bottom-meta d-flex align-items-center justify-content-between pt-2">
+
+                                <div class="post-meta-info d-flex align-items-center gap-3">
+                                    <span>
+                                        <i class="fa-regular fa-user me-1"></i>
+                                        Narin Gökçe
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-regular fa-clock me-1"></i>
+                                        10 dk okuma
+                                    </span>
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="like-btn"
+                                    aria-label="Yazıyı beğen"
+                                    title="Beğen"
+                                >
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+
+                            </div>
+                        </div>
+
+                        
+                        <a
+                            href="/posts/balkon-domates/"
+                            class="card-right-image"
+                            aria-label="Java Öğreniyorum #1: Değişkenler, Veri Tipleri ve Scanner ile Kullanıcıdan Veri Alma yazısını oku"
+                        >
+                            <img
+                                src="/img/java_foto.png"
+                                alt="Java Öğreniyorum #1: Değişkenler, Veri Tipleri ve Scanner ile Kullanıcıdan Veri Alma"
+                                loading="lazy"
+                                onerror="this.closest('.card-right-image').classList.add('image-error'); this.remove();"
+                            >
+                        </a>
+                        
+
+                    </article><article class="custom-blog-card pb-5 border-bottom">
+
+                        <div class="card-left-content">
+
+                            <div class="card-top-meta mb-2">
+                                <span class="meta-category text-uppercase">
+                                    Geliştirme
+                                </span>
+
+                                <span class="meta-divider">•</span>
+
+                                <time
+                                    class="meta-date"
+                                    datetime="2026-07-15"
+                                >
+                                    15 Temmuz 2026
+                                </time>
+                            </div>
+
+                            <h2 class="card-main-title mb-2">
+                                <a href="/posts/ilk-yazim/">
+                                    Unity'de Sınır Çizme Mekaniği ve Çözümler
+                                </a>
+                            </h2>
+
+                            
+                            <p class="card-excerpt mb-3">
+                                Unity projelerinde oyuncunun belirlenen alanın dışına çıkmasını önlemek için kullanılabilecek sınır çizme yöntemlerini ve karşılaştığım çözümleri paylaşıyorum.
+                            </p>
+                            
+
+                            <div class="card-bottom-meta d-flex align-items-center justify-content-between pt-2">
+
+                                <div class="post-meta-info d-flex align-items-center gap-3">
+                                    <span>
+                                        <i class="fa-regular fa-user me-1"></i>
+                                        Narin Gökçe
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-regular fa-clock me-1"></i>
+                                        6 dk okuma
+                                    </span>
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="like-btn"
+                                    aria-label="Yazıyı beğen"
+                                    title="Beğen"
+                                >
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+
+                            </div>
+                        </div>
+
+                        
+                        <a
+                            href="/posts/ilk-yazim/"
+                            class="card-right-image"
+                            aria-label="Unity'de Sınır Çizme Mekaniği ve Çözümler yazısını oku"
+                        >
+                            <img
+                                src="src/img/kitap.png"
+                                alt="Unity'de Sınır Çizme Mekaniği ve Çözümler"
+                                loading="lazy"
+                                onerror="this.closest('.card-right-image').classList.add('image-error'); this.remove();"
+                            >
+                        </a>
+                        
+
+                    </article><article class="custom-blog-card pb-5 border-bottom">
+
+                        <div class="card-left-content">
+
+                            <div class="card-top-meta mb-2">
+                                <span class="meta-category text-uppercase">
+                                    Geliştirme
+                                </span>
+
+                                <span class="meta-divider">•</span>
+
+                                <time
+                                    class="meta-date"
+                                    datetime="2026-07-25"
+                                >
+                                    25 Temmuz 2026
+                                </time>
+                            </div>
+
+                            <h2 class="card-main-title mb-2">
+                                <a href="/posts/deneme-yazi/">
+                                    Bu Bİr Test Yazısıdır
+                                </a>
+                            </h2>
+
+                            
+                            <p class="card-excerpt mb-3">
+                                Bu bir test yazısıdır.
+                            </p>
+                            
+
+                            <div class="card-bottom-meta d-flex align-items-center justify-content-between pt-2">
+
+                                <div class="post-meta-info d-flex align-items-center gap-3">
+                                    <span>
+                                        <i class="fa-regular fa-user me-1"></i>
+                                        Narin Gökçe
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-regular fa-clock me-1"></i>
+                                        6 dk okuma
+                                    </span>
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="like-btn"
+                                    aria-label="Yazıyı beğen"
+                                    title="Beğen"
+                                >
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+
+                            </div>
+                        </div>
+
+                        
+
+                    </article></div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="col-lg-4 blog-right-column">
+                <div class="sticky-sidebar d-flex flex-column gap-5">
+
+                    <!-- Kategoriler -->
+                    <section class="sidebar-section">
+                        <h2 class="sidebar-title">
+                            Kategoriler
+                        </h2>
+
+                        <div class="sidebar-list">
+
+                            <a href="#" class="sidebar-list-item">
+                                <span>Geliştirme &amp; Projeler</span>
+                                <span class="sidebar-count">(1)</span>
+                            </a>
+
+                            <a href="#" class="sidebar-list-item">
+                                <span>Balkon Bahçeciliği</span>
+                                <span class="sidebar-count">(1)</span>
+                            </a>
+
+                            <a href="#" class="sidebar-list-item">
+                                <span>Kitap Analizleri</span>
+                                <span class="sidebar-count">(1)</span>
+                            </a>
+
+                            <a href="#" class="sidebar-list-item">
+                                <span>Müzik &amp; Ukulele</span>
+                                <span class="sidebar-count">(1)</span>
+                            </a>
+
+                        </div>
+                    </section>
+
+                    <!-- Etiketler -->
+                    <section class="sidebar-section">
+                        <h2 class="sidebar-title">
+                            Popüler Etiketler
+                        </h2>
+
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="#" class="badge-tag">#java</a>
+                            <a href="#" class="badge-tag">#programlama</a>
+                            <a href="#" class="badge-tag">#unity</a>
+                            <a href="#" class="badge-tag">#kitap</a>
+                            <a href="#" class="badge-tag">#kişisel-gelişim</a>
+                            <a href="#" class="badge-tag">#ukulele</a>
+                        </div>
+                    </section>
+
+                    <!-- En çok okunanlar -->
+                    <section class="sidebar-section">
+                        <h2 class="sidebar-title">
+                            En Çok Okunanlar
+                        </h2>
+
+                        <div class="popular-post-list d-flex flex-column gap-3">
+
+                            <article class="popular-post-item">
+                                <h3 class="popular-post-title mb-1">
+                                    <a href="#">
+                                        Tongue Fu: Sözlü Dövüş Sanatı İncelemesi
+                                    </a>
+                                </h3>
+
+                                <span class="popular-post-meta">
+                                    <i class="fa-regular fa-clock me-1"></i>
+                                    4 dk okuma
+                                </span>
+                            </article>
+
+                            <article class="popular-post-item pt-3 border-top">
+                                <h3 class="popular-post-title mb-1">
+                                    <a href="#">
+                                        Unity Harita Sınırı Çizme Teknikleri
+                                    </a>
+                                </h3>
+
+                                <span class="popular-post-meta">
+                                    <i class="fa-regular fa-clock me-1"></i>
+                                    6 dk okuma
+                                </span>
+                            </article>
+
+                        </div>
+                    </section>
+
+                </div>
+            </aside>
+
+        </div>
+    </div>
+</main>
+
+<script>
+    document.querySelectorAll(".like-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+            const icon = button.querySelector("i");
+
+            button.classList.toggle("liked");
+
+            if (button.classList.contains("liked")) {
+                icon.classList.remove("fa-regular");
+                icon.classList.add("fa-solid");
+                button.setAttribute("aria-label", "Beğeniyi kaldır");
+            } else {
+                icon.classList.remove("fa-solid");
+                icon.classList.add("fa-regular");
+                button.setAttribute("aria-label", "Yazıyı beğen");
+            }
+        });
+    });
+</script>
+
+    <!-- Footer (Ortak) -->
+    <footer class="py-4 border-top text-center text-muted" style="font-size: 0.8rem; background-color: #fafafa;">
+        <div class="container">
+            <p class="mb-0">© 2026 Narin Gökçe. Tüm Hakları Saklıdır. Made with ❤️ by Narin</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>
